@@ -16,9 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActionBarActivity"
-            android:label="Lessons Action Bar"/>
-        <activity android:name=".RecyclerViewActivity"
+        <activity
+            android:name=".ActionBarActivity"
+            android:label="Lessons Action Bar" />
+        <activity
+            android:name=".RecyclerViewActivity"
             android:label="Lessons">
 
         </activity>

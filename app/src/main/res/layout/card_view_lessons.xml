@@ -25,8 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/lesson_image"
-            android:textSize="30sp"
             android:text="Crab Walk"
+            android:textSize="30sp"
 
             />
 

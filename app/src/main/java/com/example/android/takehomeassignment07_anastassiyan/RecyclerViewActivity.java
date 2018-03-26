@@ -46,8 +46,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
             return new Lessons("Snake Crawl", "15 min", R.drawable.shakecrawl);
         else
-            adapter.notifyDataSetChanged();
-        return new Lessons("Crab Walk", "15 min", R.drawable.crabwalk);
+
+            return new Lessons("Crab Walk", "15 min", R.drawable.crabwalk);
 
     }
 
