@@ -5,12 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 
 public class RecyclerViewActivity extends AppCompatActivity {
-    ArrayList<Lessons> lessons;
-    LessonAdapter adapter;
+    private ArrayList<Lessons> lessons;
+    private LessonAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +28,38 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
     }
+
     private void initialData() {
         lessons = new ArrayList<>();
         lessons.add(new Lessons("Table", "15 min", R.drawable.table));
         lessons.add(new Lessons("Snake Crawl", "15 min", R.drawable.shakecrawl));
         lessons.add(new Lessons("Crab Walk", "15 min", R.drawable.crabwalk));
     }
+
+
+    private Lessons getRandomLesson() {
+        int num = (int) (Math.random() * 3);
+        if (num == 0)
+
+            return new Lessons("Table", "15 min", R.drawable.table);
+        if (num == 1)
+
+            return new Lessons("Snake Crawl", "15 min", R.drawable.shakecrawl);
+        else
+            adapter.notifyDataSetChanged();
+        return new Lessons("Crab Walk", "15 min", R.drawable.crabwalk);
+
+    }
+
+
+    public void addRandomLesson(View view) {
+        lessons.add(getRandomLesson());
+        adapter.notifyDataSetChanged();
+    }
 }
+
+
+
+
+
+
